@@ -28,3 +28,6 @@ ELMT_S* insere_fim(ELMT_S*, char*);
 ELMT_S* remove(ELMT_S*, char*);
 
 ELMT_S* destroi(ELMT_S*);
+
+
+//testes
