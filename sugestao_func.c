@@ -87,6 +87,26 @@ NODO *LSE_insereNodo(NODO *lista, char *vetor){
     return lista;
 }
 
+//consulta existencia
+int existe(NODO *lista, NODO *novo){
+
+    NODO *aux;
+    aux = lista;
+    rtrn = 0;
+
+    while(aux != NULL){
+        if(strcmp(aux->inf.p,novo->inf.p) == 0){
+            rtrn = 1;
+        }
+    aux = aux->next;
+
+    }
+
+    return rtrn;
+}
+
+
+
 
 //Imprime lista
 void LDE_imprime(NODO *lista){
@@ -125,6 +145,17 @@ int ARQ_validaCaractere(char caractere){
             result = 0;
         }
     }
+
+
+    /*  teste de validação
+
+        if ( 65 < caractere || caractere < 90)
+            result = 1;
+        else
+            result = 0;
+
+
+    */
 
     return result;
 }

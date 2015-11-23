@@ -9,9 +9,9 @@
 #define TAM_PALAVRA 20
 #define PALAVRAS_SUGERIDAS 5
 
-int main(){
+int main(/*char *entrada, char *consultar, char *saida, int num_pesquisa */){
 
-    NODO *lista, *aux;
+    NODO *texto, *lista, *aux;
     ESTATISTICA sugeridas[PALAVRAS_SUGERIDAS];
     int i;
     char buscasPalavra[TAM_PALAVRA];
@@ -21,9 +21,13 @@ int main(){
     clock_t tempoInicial, tempoFinal;
 
     //Gera a lista
-    lista = LSE_inicializa();
-    lista = ARQ_geraLista(lista, "teste.txt");
+    texto = LSE_inicializa();
+    texto = ARQ_geraLista(lista, "teste.txt");
 
+
+    //Gera a lista de palavras a consultar
+    lista = LSE_incializa();
+    texto = ARQ_geraLista(texto, "consultar.txt");
     //---------------------------------------------------------------------------------------------
     //Marca o tempo antes da função ser executada
     tempoInicial = clock();
@@ -54,6 +58,7 @@ int main(){
     qtdA = SRC_qtdPalavras(lista, "A");
     qtdB = SRC_qtdPalavras(lista, "SUA");
     qtdAB = SRC_qtdSeqPalavras(lista, "A", "SUA");
+
     printf("A : %d\n", qtdA);
     printf("B : %d\n", qtdB);
     printf("AB: %d\n", qtdAB);
