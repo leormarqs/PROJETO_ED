@@ -1,20 +1,26 @@
 //Constantes
-#define TAM_PALAVRA 30
+#define TAM_PALAVRA 20
 #define TAM_ARQUIVO 10
 
-//Estrutura para a lista duplamente encadeada
+//TAD para encadear todas palavras do texto
 typedef struct palavra{
     char p[TAM_PALAVRA];
 }PALAVRA;
 
 typedef struct nodo{
     struct nodo *next;
-    struct nodo *prev;
     PALAVRA inf;
 }NODO;
 
+//TAD Para armazenar dados de sugestão
+typedef struct estatisticaPalavra{
+    char sugestao[TAM_PALAVRA];
+    float freq;
+}ESTATISTICA;
 
-//---------------------------------------------------------------------------------- BLOCO LDE
+
+
+//---------------------------------------------------------------------------------- BLOCO LSE
 NODO *LDE_inicializa();
 NODO *LDE_novoNodo(char vetor[]);
 NODO *LDE_insereNodo(NODO *lista, char vetor[]);
