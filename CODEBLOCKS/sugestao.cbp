@@ -34,7 +34,7 @@
 		<Unit filename="sugestao.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="sugestao_func.c">
+		<Unit filename="sugestao_lib.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="sugestao_lib.h" />

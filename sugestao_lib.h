@@ -10,37 +10,37 @@ typedef struct palavra{
 typedef struct nodo{
     PALAVRA inf;
     struct nodo *next;
-}TEXTO;
+}NODO;
 
-//TAD Para armazenar dados de sugestão
-typedef struct estatisticaPalavra{
-    char sugestao[TAM_PALAVRA];
-    float freq;
-}ESTATISTICA;
-
-
-typedef struct proxima_palavra{
-    char palav[TAM_PALAVRA];
-    int  freqAB;
-    int  freqB;
-}PROXIMA_PALAVRA;
-
-typedef struct proximas{
-    PROXIMA_PALAVRA inf;
-    struct proximas *next;
-}PROXIMAS; //PROVAVELMENTE MUDE PARA UMA ARVORE
+/* //TAD Para armazenar dados de sugestão */
+/* typedef struct estatisticaPalavra{ */
+/*     char sugestao[TAM_PALAVRA]; */
+/*     float freq; */
+/* }ESTATISTICA; */
 
 
-typedef struct palavra_consultada{
-    char palav[TAM_PALAVRA];
-    int  freqA;
-}PALAVRA_CONSULTADA;
+/* typedef struct proxima_palavra{ */
+/*     char palav[TAM_PALAVRA]; */
+/*     int  freqAB; */
+/*     int  freqB; */
+/* }PROXIMA_PALAVRA; */
 
-typedef struct consultadas{
-    PALAVRA_CONSULTADA inf;
-    PROXIMAS *vizinhas; //provavelmente mude para uma arvore
-    struct consultadas *next;
-}CONSULTADAS;
+/* typedef struct proximas{ */
+/*     PROXIMA_PALAVRA inf; */
+/*     struct proximas *next; */
+/* }PROXIMAS; //PROVAVELMENTE MUDE PARA UMA ARVORE */
+
+
+/* typedef struct palavra_consultada{ */
+/*     char palav[TAM_PALAVRA]; */
+/*     int  freqA; */
+/* }PALAVRA_CONSULTADA; */
+
+/* typedef struct consultadas{ */
+/*     PALAVRA_CONSULTADA inf; */
+/*     PROXIMAS *vizinhas; //provavelmente mude para uma arvore */
+/*     struct consultadas *next; */
+/* }CONSULTADAS; */
 
 
 
@@ -58,33 +58,17 @@ GERAR ARQUIVO COM SAIDAS - ?
 
 
 
-
-
-
-
-
-
-
 */
 
 
-
-
-
-
-
-
-
-
-
 //---------------------------------------------------------------------------------- BLOCO LSE
-NODO *LDE_inicializa();
-NODO *LDE_novoNodo(char *vetor);
-NODO *LDE_insereNodo(NODO *lista, char *vetor);
-NODO *LDE_insereNodo(NODO *lista, char *vetor);
-void LDE_imprime(NODO *lista);
+extern NODO *LSE_inicializa();
+extern NODO *LSE_novoNodo(char *);
+extern NODO *LSE_insereNodo(NODO *, char *);
+extern NODO *LSE_insereNodo(NODO *, char *);
+//int existe(NODO *, NODO *)
+extern void  LSE_imprime(NODO *);
 
 
 //---------------------------------------------------------------------------------- BLOCO ARQ
-int ARQ_validaCaractere(char caractere);
-NODO *ARQ_geraLista(NODO *lista, char *arquivo);
+extern NODO *ARQ_LE_TEXTO(NODO *, char *);
