@@ -1,5 +1,4 @@
 #include "proximas.h"
-
 //CONSTANTES
 #define TAM_PALAVRA 20
 
@@ -19,8 +18,6 @@ typedef struct cons{
   NO_PROX *viz;
 
 }NO_CONS;
-
-
 
 NO_CONS *inicializaCONS();
 
@@ -48,7 +45,10 @@ NO_CONS *busca_palavras(NODO *, NODO *, NO_CONS *);
 
 NO_CONS *calcula_estatCONS(NO_CONS *);
 
-NO_PROX *calcula_estatPROX(int, NO_PROX *);
+void grava_arquivo(NO_CONS *, int, char *);
 
+void imprimeCONS(NO_CONS *, int, FILE *);
 
+void imprimeSUG(NO_PROX *, int *, int, FILE *);
 
+void grava_tempos(clock_t [], char *);

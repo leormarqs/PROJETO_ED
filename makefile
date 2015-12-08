@@ -1,5 +1,5 @@
 sugestao: sugestao.o fileread.o consultadas.o proximas.o
-	gcc -o sugestao sugestao.o fileread.o consultadas.o proximas.o 
+	gcc -o sugestao sugestao.o fileread.o consultadas.o proximas.o -lm
 	rm *.o
 sugestao.o: sugestao.c consultadas.h
 	gcc -c -g sugestao.c 

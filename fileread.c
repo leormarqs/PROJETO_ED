@@ -128,3 +128,13 @@ int freq_palav(NODO *lista, char *palavra){
 
   return contador;
 }
+
+
+
+
+
+
+
+
+
+  

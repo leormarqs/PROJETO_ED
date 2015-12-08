@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 #include "consultadas.h"
 
 
@@ -252,7 +251,6 @@ NO_CONS* insereCONS(NO_CONS *raiz, NODO *palavra, int *ok, NODO *texto){
 }
 
 
-
 //FUNÇÃO QUE APLICA A INSERÇÃO EM TODAS AS CONSULTADAS
 //FUNÇÃO QUE PEGA UMA CONSULTADA E CONSULTA NO TEXTO, APÓS INSERE NA ESTRUTURA
 NO_CONS *busca_palavras(NODO *texto, NODO *consultas, NO_CONS *busca)
@@ -278,35 +276,88 @@ NO_CONS *busca_palavras(NODO *texto, NODO *consultas, NO_CONS *busca)
 
 }
 
-
 NO_CONS *calcula_estatCONS(NO_CONS *raiz){
-
+  NO_PROX *aux;
   if(raiz != NULL){
 
     raiz->viz = calcula_estatPROX(raiz->inf.freqA, raiz->viz);
+    
+    aux = inicializaPROX();
+    aux = organizaArvore(aux, raiz->viz);
 
+    raiz->viz = aux;
+ 
     raiz->esq = calcula_estatCONS(raiz->esq);
-    raiz->dir = calcula_estatCONS(raiz-dir);
+    raiz->dir = calcula_estatCONS(raiz->dir);
 
   }
+  return raiz;
 }
 
 
+void grava_arquivo(NO_CONS *raiz, int k, char *arquivo){
+  FILE *ARQ;
+  
+  //Abrindo arquivo
+  ARQ = fopen(arquivo, "w");
+  
+  if(ARQ == NULL){
+    printf("Arquivo inexistente");
+  }
+  else{
+    imprimeCONS(raiz, k, ARQ);
+    
+    fclose(ARQ);
+    
+  }
+}
 
-NO_PROX *calcula_estatPROX(int freqA, NO_PROX *proximas){
+void imprimeCONS(NO_CONS *raiz, int k, FILE *ARQ){
+  int cont;
   
   if(raiz != NULL){
-
-    raiz->inf.stat = raiz->inf.freqAB / sqrt(freqA * raiz->inf.freqB);
     
-    raiz->esq = calcula_estatPROX(freqA, raiz-esq);
-    raiz->dir = calcula_estatPROX(freqA, raiz-dir);
-
-
+    imprimeCONS(raiz->esq, k, ARQ);
+    
+    fprintf(ARQ,"\nConsulta: %s\n", raiz->inf.palavra);
+    cont = 0;
+    imprimeSUG(raiz->viz, &cont, k, ARQ);
+    
+    imprimeCONS(raiz->dir, k, ARQ);
   }
+}
 
+void imprimeSUG(NO_PROX *raiz, int *cont,int k, FILE *ARQ){
 
+  if(raiz != NULL ){
+    if((*cont) < k){
+      *cont = *cont + 1;
+      imprimeSUG(raiz->dir, cont, k, ARQ);
+      
+      fprintf(ARQ, "\tSugerida: %s \t\t\t (%.6f)\n",raiz->inf.palav, raiz->inf.stat);
+      
+      imprimeSUG(raiz->esq, cont, k, ARQ);
+    }
+  }
+}
 
+void grava_tempos(clock_t tempo[], char *arquivo){
+  FILE *ARQ;
 
+  //Abrindo arquivo
+  ARQ = fopen(arquivo, "a");
 
+  if(ARQ == NULL){
+    printf("Arquivo inexistente");
+  }
+  else{
+    
+    fprintf(ARQ,"\n\nTempo total de execução do programa: %ld ms\n",tempo[0]);
+    fprintf(ARQ,"Tempo de leitura do corpus: %ld ms\n",tempo[1]);
+    fprintf(ARQ,"Tempo de cálculo das medidas estatísticas: %ld ms\n",tempo[2]);
+    fprintf(ARQ,"Tempo de consulta na estrutura de dados de saída: %ld ms\n",tempo[3]);
+
+    fclose(ARQ);
+    
+  }
 }

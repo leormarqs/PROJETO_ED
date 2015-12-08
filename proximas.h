@@ -1,5 +1,4 @@
 #include "fileread.h"
-
 //CONSTANTES
 #define TAM_PALAVRA 20
 
@@ -16,9 +15,6 @@ typedef struct prox{
   int FB;
   PROX_PALAVRA inf;
 }NO_PROX;
-
-
-
 
 NO_PROX *inicializaPROX();
 
@@ -41,3 +37,9 @@ NO_PROX *caso1PROX(NO_PROX *, int *);
 NO_PROX *caso2PROX(NO_PROX *, int *);
 
 NO_PROX* inserePROX(NO_PROX *,NODO * , int *, NODO *);
+
+NO_PROX* insereSTAT(NO_PROX *, PROX_PALAVRA , int *);
+
+NO_PROX *calcula_estatPROX(int, NO_PROX *);
+
+NO_PROX *organizaArvore(NO_PROX *, NO_PROX *);

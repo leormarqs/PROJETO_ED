@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include "proximas.h"
 
 
@@ -243,4 +244,96 @@ NO_PROX* inserePROX(NO_PROX *raiz, NODO *palavra, int *ok, NODO *texto){
 
   return raiz;
 }
+
+NO_PROX* insereSTAT(NO_PROX *raiz, PROX_PALAVRA info , int *ok){
+
+  if (raiz == NULL){
+    raiz = (NO_PROX*) malloc(sizeof(NO_PROX));
+    if(raiz == NULL){
+      printf("Memória Insuficiente!");
+      *ok = 0;
+    }
+    else{  
+      raiz->inf = info;
+      raiz->esq = NULL;
+      raiz->dir = NULL;
+      raiz->FB = 0; 
+      *ok = 1;
+    }
+  }
+  else{
+    if (info.stat < raiz->inf.stat){
+      raiz->esq = insereSTAT(raiz->esq,info,ok);      
+      if (*ok){
+	switch(raiz->FB){
+	  case -1:
+	    raiz->FB = 0;
+	    *ok = 0;
+	    break;
+	  case  0:
+	    raiz->FB = 1; 
+	    break;	
+	  case  1:
+	    raiz=caso1PROX(raiz,ok);
+	    break;
+	}
+      }
+    }
+    else{
+      raiz->dir = insereSTAT(raiz->dir,info,ok);
+      if (*ok){ 
+	switch(raiz->FB){
+	case  1:
+	  raiz->FB = 0; 
+	  *ok = 0;
+	  break;
+	case  0:
+	  raiz->FB = -1;
+	  break;
+	case -1:
+	  raiz = caso2PROX(raiz,ok);
+	  break;
+	}
+      }
+    }
+  }
+  return raiz;
+}
+
+
+NO_PROX *calcula_estatPROX(int freqA, NO_PROX *raiz){
+  
+  if(raiz != NULL){
+
+    raiz->inf.stat = (raiz->inf.freqAB / sqrt(freqA * raiz->inf.freqB));
+    
+    raiz->esq = calcula_estatPROX(freqA, raiz->esq);
+    raiz->dir = calcula_estatPROX(freqA, raiz->dir);
+
+  }
+  return raiz;
+}
+
+NO_PROX *organizaArvore(NO_PROX *raiz, NO_PROX *organiza){
+
+  int ok;
+
+  if(organiza != NULL){
+
+    raiz = insereSTAT(raiz, organiza->inf, &ok);
+
+    if(organiza->esq != NULL){
+      raiz = organizaArvore(raiz, organiza->esq);
+    }
+    if(organiza->dir != NULL){
+      raiz = organizaArvore(raiz, organiza->dir);
+    }
+    
+    free(organiza);
+    organiza = NULL;
+
+  }
+  return raiz;
+}
+
 
