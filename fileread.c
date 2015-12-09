@@ -5,12 +5,21 @@
 #include <ctype.h>
 #include "fileread.h"
 
+/*
+
+   TAD RESPONSÁVEL PELA LEITURA DO CORPUS E DAS PALAVRAS A SEREM CONSULTADAS
+   E RESPECTIVO ARMAZENAMENTO EM UMA LISTA SIMPLESMENTE ENCADEADA
+
+*/
+
+
+
 //---------------------------------------------------------------------- BLOCO LSE
 NODO *LSE_inicializa(){
   return NULL;
 }
 
-//A função cria um novo nodo e o retorna
+//A função cria um novo nodo com a palavra fornecida e o retorna
 NODO *LSE_novoNodo(char *vetor){
   NODO *novoNodo;
   
@@ -23,6 +32,7 @@ NODO *LSE_novoNodo(char *vetor){
   return novoNodo;
 }
 
+//Insere a palvra fornecida em uma lista
 NODO *LSE_insereNodo(NODO *lista, char *vetor){
 
   NODO *aux, *novoNodo;
@@ -65,7 +75,7 @@ void LSE_imprime(NODO *lista){
 
 //--------------------------------------------------------------------- BLOCO ARQ
 
-/* LÊ UM ARQUIVO DE TEXTO, SEPARA SUAS PALAVRAS, E ARMAZENA EM UMA LISTA */
+/* LÊ O ARQUIVO DE TEXTO DO ENDEREÇO FORNECIDO, SEPARA SUAS PALAVRAS DE ACORDO COM OS TOKENS, E ARMAZENA EM UMA LISTA */
 
 NODO *ARQ_LE_TEXTO(NODO *lista, char *arquivo){
   

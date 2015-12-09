@@ -3,11 +3,12 @@
 #include <string.h>
 #include "consultadas.h"
 
-
+//INICIALIZA A AVL
 NO_CONS *inicializaCONS(){
   return NULL;
 }
 
+//CALCULA A ALTURA
 int alturaCONS(NO_CONS *raiz){
   int alt_esq, alt_dir, rtrn;
 
@@ -30,10 +31,12 @@ int alturaCONS(NO_CONS *raiz){
   return rtrn;
 }
 
+//CALCULA O BALANCEAMENTO
 int balanceamentoCONS(NO_CONS *raiz){
   return (alturaCONS(raiz->esq) - alturaCONS(raiz->dir));
 }
 
+//IMPRIME A AVL MARCANDO O NIVEL
 void imprime_nivelCONS(NO_CONS *raiz, int cont){
     int i;
 
@@ -54,6 +57,7 @@ void imprime_nivelCONS(NO_CONS *raiz, int cont){
     }
 }
 
+//APLICA ROTAÇÃO
 NO_CONS *rotacao_direitaCONS(NO_CONS *raiz){
    NO_CONS *aux;
 
@@ -67,6 +71,7 @@ NO_CONS *rotacao_direitaCONS(NO_CONS *raiz){
    return raiz;
 }
 
+//APLICA ROTAÇÃO
 NO_CONS *rotacao_esquerdaCONS(NO_CONS *raiz){
    NO_CONS *aux;
 
@@ -80,6 +85,7 @@ NO_CONS *rotacao_esquerdaCONS(NO_CONS *raiz){
    return raiz;
 }
 
+//APLICA ROTAÇÃO
 NO_CONS *rotacao_dupla_direitaCONS(NO_CONS *raiz){
   NO_CONS *aux, *aux1;
 
@@ -110,6 +116,7 @@ NO_CONS *rotacao_dupla_direitaCONS(NO_CONS *raiz){
   return raiz;
 }
 
+//APLICA ROTAÇÃO
 NO_CONS *rotacao_dupla_esquerdaCONS(NO_CONS *raiz){
    NO_CONS *aux, *aux1;
 
@@ -140,6 +147,7 @@ NO_CONS *rotacao_dupla_esquerdaCONS(NO_CONS *raiz){
    return raiz;
 }
 
+//VERIFICA NECESSIDADE DE ROTAÇÃO
 NO_CONS *caso1CONS(NO_CONS *raiz , int *ok){
   NO_CONS *aux;
 
@@ -158,6 +166,7 @@ NO_CONS *caso1CONS(NO_CONS *raiz , int *ok){
   return raiz;
 }
 
+//APLICA ROTAÇÃO
 NO_CONS *caso2CONS(NO_CONS *raiz , int *ok){
   NO_CONS *aux;
 
@@ -176,6 +185,7 @@ NO_CONS *caso2CONS(NO_CONS *raiz , int *ok){
   return raiz;
 }
 
+//INSERE NA AVL ORDENANDO ALFABETICAMENTE
 NO_CONS* insereCONS(NO_CONS *raiz, NODO *palavra, int *ok, NODO *texto){
   int aux;
 
@@ -185,7 +195,8 @@ NO_CONS* insereCONS(NO_CONS *raiz, NODO *palavra, int *ok, NODO *texto){
       printf("Memória Insuficiente!");
       *ok = 0;
     }
-    else{      
+    else{
+      //CASO PALAVRA AINDA NÃO CONSTE NA AVL
       strcpy(raiz->inf.palavra,palavra->inf.p);
       raiz->inf.freqA = 1;
 
@@ -193,6 +204,7 @@ NO_CONS* insereCONS(NO_CONS *raiz, NODO *palavra, int *ok, NODO *texto){
       raiz->dir = NULL;
       raiz->FB = 0;
 
+      //INSERIR A PROXIMA PALAVRA DO TEXTO NA AVL DE CO-OCORRENCIAS
       raiz->viz = inicializaPROX();
       raiz->viz = inserePROX(raiz->viz, palavra->next, &aux, texto);
 
@@ -239,9 +251,11 @@ NO_CONS* insereCONS(NO_CONS *raiz, NODO *palavra, int *ok, NODO *texto){
       }
 
       else{
+	//CASO A PALAVRA JA EXISTA, INCREMENTA SUA FREQUENCIA
 	raiz->inf.freqA++;
+	//INSERIR A PROXIMA PALAVRA DO TEXTO NA AVL DE CO-OCORRENCIAS
 	raiz->viz = inserePROX(raiz->viz, palavra->next, &aux, texto);
-	//INSERIR A PALAVRA VIZINHA NAS PRÓXIMAS
+	
 	*ok = 0;
       }
     }
@@ -250,41 +264,45 @@ NO_CONS* insereCONS(NO_CONS *raiz, NODO *palavra, int *ok, NODO *texto){
   return raiz;
 }
 
-
-//FUNÇÃO QUE APLICA A INSERÇÃO EM TODAS AS CONSULTADAS
-//FUNÇÃO QUE PEGA UMA CONSULTADA E CONSULTA NO TEXTO, APÓS INSERE NA ESTRUTURA
+//LE PALAVRAS A SEREM CONSULTADAS, E INSERE NA AVL DE PALAVRAS A SEREM CONSULTADAS
 NO_CONS *busca_palavras(NODO *texto, NODO *consultas, NO_CONS *busca)
 {
 
   NODO *aux_texto, *aux_consultas = consultas;
   int ok=0;
+  //PERCORRE A LISTA DE PALAVRAS A SEREM CONSULTADAS
   while(aux_consultas != NULL){
     aux_texto = texto;
 
+    //PERCORRE O CORPUS
     while(aux_texto != NULL){
-      
+
+      //QUANDO ENCONTRADA A PALAVRA A SER CONSULTADA, INSERE NA AVL
       if(strcmp(aux_texto->inf.p,aux_consultas->inf.p)==0){
 	busca = insereCONS(busca,aux_texto,&ok,texto);
-	//printf("%s \n",aux_texto->inf.p);
       }
       aux_texto = aux_texto->next;
     }
     aux_consultas = aux_consultas->next;
   }
 
+  //RETORNA A AVL DE PALAVRAS A SEREM CONSULTADAS
   return busca;
 
 }
 
+//CALCULA AS ESTÁTISTICA DE CO-OCORRENCIA DE UMA AVL DE PALAVRAS CONSULTADAS
 NO_CONS *calcula_estatCONS(NO_CONS *raiz){
   NO_PROX *aux;
   if(raiz != NULL){
 
+    //PARA CADA NODO DA AVL DE PALAVRAS CONSULTADAS, CALCULA
+    //AS ESTATISTICAS DE CO-OCORRENCIA DE TODAS AS PALAVRAS QUE CO-OCORREM COM ESTA PALAVRA
     raiz->viz = calcula_estatPROX(raiz->inf.freqA, raiz->viz);
-    
+
+    //ORDENA AS PALAVRAS DE CO-OCORRENCIA PELA ESTATISTICA
     aux = inicializaPROX();
     aux = organizaArvore(aux, raiz->viz);
-
     raiz->viz = aux;
  
     raiz->esq = calcula_estatCONS(raiz->esq);
@@ -294,7 +312,7 @@ NO_CONS *calcula_estatCONS(NO_CONS *raiz){
   return raiz;
 }
 
-
+//ABRE ARQUIVO DE SAIDA E GRAVA AS SAIDAS
 void grava_arquivo(NO_CONS *raiz, int k, char *arquivo){
   FILE *ARQ;
   
@@ -312,6 +330,8 @@ void grava_arquivo(NO_CONS *raiz, int k, char *arquivo){
   }
 }
 
+//CONSULTA A ARVORE DE CONSULTADAS, E GRAVA PARA CADA PALAVRA CONSULTADA,
+//AS K PALAVRAS COM MAIOR ESTATISTICA DE CO-OCORRENCIA
 void imprimeCONS(NO_CONS *raiz, int k, FILE *ARQ){
   int cont;
   
@@ -327,6 +347,8 @@ void imprimeCONS(NO_CONS *raiz, int k, FILE *ARQ){
   }
 }
 
+//CONSULTA A ARVORE DE CO-OCORRENCIAS E GRAVA AS K PALAVRAS
+//COM MAIOR ESTATISTICA NO ARQUIVO FORNECIDO
 void imprimeSUG(NO_PROX *raiz, int *cont,int k, FILE *ARQ){
 
   if(raiz != NULL ){
@@ -341,6 +363,7 @@ void imprimeSUG(NO_PROX *raiz, int *cont,int k, FILE *ARQ){
   }
 }
 
+//GRAVA OS TEMPOS DE EXECUÇÃO NO ARQUIVO DE SAIDA
 void grava_tempos(clock_t tempo[], char *arquivo){
   FILE *ARQ;
 

@@ -1,14 +1,20 @@
+/* 
+   TAD RESPONSÁVEL POR ARMAZENAR AS PALAVRAS DE CO-OCORRÊNCIA
+   PARA CADA PALAVRA PESQUISADA EM UMA AVL
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #include "proximas.h"
 
-
+//INICIALIZA UMA AVL
 NO_PROX *inicializaPROX(){
     return NULL;
 }
 
+//CALCULA A ALTURA DE UM NODO
 int alturaPROX(NO_PROX *raiz){
   int alt_esq, alt_dir, rtrn;
 
@@ -31,10 +37,12 @@ int alturaPROX(NO_PROX *raiz){
   return rtrn;
 }
 
+//CALCULA O BALANCEAMENTO DE UMA ARVORE
 int balanceamento(NO_PROX *raiz){
   return (alturaPROX(raiz->esq) - alturaPROX(raiz->dir));
 }
 
+//IMPRIME A ARVORE DEMARCANDO OS NIVEIS DO NODO
 void imprime_nivelPROX(NO_PROX *raiz, int cont){
     int i;
     
@@ -53,6 +61,7 @@ void imprime_nivelPROX(NO_PROX *raiz, int cont){
     }
 }
 
+//APLICA ROTAÇÃO A DIREITA EM UM NODO
 NO_PROX *rotacao_direitaPROX(NO_PROX *raiz){
    NO_PROX *aux;
 
@@ -66,6 +75,7 @@ NO_PROX *rotacao_direitaPROX(NO_PROX *raiz){
    return raiz;
 }
 
+//APLICA ROTAÇÃO A ESQUERDA EM UM NODO
 NO_PROX *rotacao_esquerdaPROX(NO_PROX *raiz){
    NO_PROX *aux;
 
@@ -79,6 +89,7 @@ NO_PROX *rotacao_esquerdaPROX(NO_PROX *raiz){
    return raiz;
 } 
 
+//APLICA ROTAÇÃO DUPLA DIREITA EM UM NODO
 NO_PROX *rotacao_dupla_direitaPROX(NO_PROX *raiz){
   NO_PROX *aux, *aux1;
   
@@ -109,6 +120,7 @@ NO_PROX *rotacao_dupla_direitaPROX(NO_PROX *raiz){
   return raiz;
 } 
 
+//APLICA ROTAÇÃO DUPLA ESQUERDA EM UM NODO
 NO_PROX *rotacao_dupla_esquerdaPROX(NO_PROX *raiz){
    NO_PROX *aux, *aux1;
 
@@ -139,6 +151,7 @@ NO_PROX *rotacao_dupla_esquerdaPROX(NO_PROX *raiz){
    return raiz;
 }
 
+//VERIFICA NECESSIDADE DE ROTAÇÃO
 NO_PROX *caso1PROX(NO_PROX *raiz , int *ok){
   NO_PROX *aux; 
 
@@ -157,6 +170,7 @@ NO_PROX *caso1PROX(NO_PROX *raiz , int *ok){
   return raiz;
 }
 
+//VERIFICA NECESSIDADE DE ROTAÇÃO
 NO_PROX *caso2PROX(NO_PROX *raiz , int *ok){
   NO_PROX *aux; 
   
@@ -175,6 +189,7 @@ NO_PROX *caso2PROX(NO_PROX *raiz , int *ok){
   return raiz;
 }
 
+//INSERE UMA PALAVRA EM UMA AVL COM CHAVE PELA ORDEM ALFABETICA
 NO_PROX* inserePROX(NO_PROX *raiz, NODO *palavra, int *ok, NODO *texto){
 
   if (raiz == NULL){
@@ -186,8 +201,8 @@ NO_PROX* inserePROX(NO_PROX *raiz, NODO *palavra, int *ok, NODO *texto){
     else{  
       strcpy(raiz->inf.palav,palavra->inf.p);
       raiz->inf.freqAB = 1;
-      raiz->inf.freqB = freq_palav(texto, palavra->inf.p); 
       //CONTA A FREQUENCIA DA PALAVRA NO TEXTO DE ORIGEM
+      raiz->inf.freqB = freq_palav(texto, palavra->inf.p); 
       raiz->inf.stat = 0;
       
       raiz->esq = NULL;
@@ -236,6 +251,7 @@ NO_PROX* inserePROX(NO_PROX *raiz, NODO *palavra, int *ok, NODO *texto){
       }
 
       else{
+	//CASO A PALAVRA JÁ EXISTA, INCREMENTA A FREQUÊNCIA DE CO-OCORRÊNCIA
 	raiz->inf.freqAB++;
 	*ok = 0;
       }
@@ -245,6 +261,7 @@ NO_PROX* inserePROX(NO_PROX *raiz, NODO *palavra, int *ok, NODO *texto){
   return raiz;
 }
 
+//INSERE UMA PALAVRA EM UMA AVL COM CHAVE PELA ESTATISTICA DE CO-OCORRENCIA
 NO_PROX* insereSTAT(NO_PROX *raiz, PROX_PALAVRA info , int *ok){
 
   if (raiz == NULL){
@@ -300,11 +317,12 @@ NO_PROX* insereSTAT(NO_PROX *raiz, PROX_PALAVRA info , int *ok){
   return raiz;
 }
 
-
+//CALCULA A ESTATITICA DE CO-OCORRENCIA DE CADA PALAVRA DE UMA ARVORE
 NO_PROX *calcula_estatPROX(int freqA, NO_PROX *raiz){
   
   if(raiz != NULL){
-
+    
+    //PARA CADA NODO DA ÁRVORE, CALCULA A ESTATISTICA DE CO-OCORRENCIA
     raiz->inf.stat = (raiz->inf.freqAB / sqrt(freqA * raiz->inf.freqB));
     
     raiz->esq = calcula_estatPROX(freqA, raiz->esq);
@@ -314,12 +332,16 @@ NO_PROX *calcula_estatPROX(int freqA, NO_PROX *raiz){
   return raiz;
 }
 
+//CONVERTE UMA ARVORE COM CHAVE PELA ORDEM ALFABETICA
+//PARA UMA ARVORE COM CHAVE PELE ESTATISTICA
 NO_PROX *organizaArvore(NO_PROX *raiz, NO_PROX *organiza){
 
   int ok;
 
   if(organiza != NULL){
 
+    //INSERE A INFORMAÇÃO DO NO ATUAL EM
+    //UMA ARVORE ORDENADA PELA ESTATITICA
     raiz = insereSTAT(raiz, organiza->inf, &ok);
 
     if(organiza->esq != NULL){
@@ -328,12 +350,16 @@ NO_PROX *organizaArvore(NO_PROX *raiz, NO_PROX *organiza){
     if(organiza->dir != NULL){
       raiz = organizaArvore(raiz, organiza->dir);
     }
-    
+
+    //DESTROI A ARVORE ANTERIOR
     free(organiza);
     organiza = NULL;
 
   }
+  
+  //RETORNA A NOVA ARVORE
   return raiz;
+  
 }
 
 
