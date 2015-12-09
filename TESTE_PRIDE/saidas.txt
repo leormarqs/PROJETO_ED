@@ -1,0 +1,114 @@
+
+Consulta: AFTER
+	Sugerida: BREAKFAST 			 (0,128432)
+	Sugerida: LISTENING 			 (0,115129)
+	Sugerida: OURSELVES 			 (0,101535)
+	Sugerida: HANDING 			 (0,101535)
+	Sugerida: A 			 (0,075784)
+	Sugerida: WELCOMING 			 (0,071796)
+	Sugerida: WANDERING 			 (0,071796)
+	Sugerida: AMUSING 			 (0,071796)
+	Sugerida: DINNER 			 (0,039081)
+	Sugerida: MR 			 (0,020461)
+
+Consulta: COME
+	Sugerida: BACK 			 (0,143799)
+	Sugerida: HERE 			 (0,121046)
+	Sugerida: PREPARED 			 (0,092450)
+	Sugerida: HURRY 			 (0,053376)
+	Sugerida: REPEATED 			 (0,040032)
+	Sugerida: TO 			 (0,029735)
+	Sugerida: DOWN 			 (0,029235)
+	Sugerida: KITTY 			 (0,022646)
+	Sugerida: AND 			 (0,019156)
+	Sugerida: AS 			 (0,016740)
+
+Consulta: HAND
+	Sugerida: COLLECTING 			 (0,250000)
+	Sugerida: WARMLY 			 (0,088388)
+	Sugerida: REST 			 (0,062500)
+	Sugerida: INFORMATION 			 (0,060634)
+	Sugerida: LIZZY 			 (0,035007)
+	Sugerida: IN 			 (0,021517)
+	Sugerida: JANE 			 (0,019522)
+	Sugerida: THAT 			 (0,019048)
+	Sugerida: WAS 			 (0,018725)
+	Sugerida: BUT 			 (0,013910)
+
+Consulta: JANE
+	Sugerida: PICTURED 			 (0,078087)
+	Sugerida: GAINS 			 (0,078087)
+	Sugerida: WHO 			 (0,058766)
+	Sugerida: STRUGGLED 			 (0,055216)
+	Sugerida: FIRMLY 			 (0,055216)
+	Sugerida: HURRY 			 (0,052058)
+	Sugerida: S 			 (0,049585)
+	Sugerida: AND 			 (0,035031)
+	Sugerida: BUT 			 (0,021724)
+	Sugerida: BEGAN 			 (0,012837)
+
+Consulta: LIZZY
+	Sugerida: SAYS 			 (0,062622)
+	Sugerida: ENGAGED 			 (0,046676)
+	Sugerida: I 			 (0,044989)
+	Sugerida: SOMETHING 			 (0,036155)
+	Sugerida: MARRY 			 (0,035007)
+	Sugerida: SAID 			 (0,032904)
+	Sugerida: WHERE 			 (0,028006)
+	Sugerida: YOU 			 (0,026031)
+	Sugerida: IS 			 (0,025757)
+	Sugerida: CAN 			 (0,018547)
+
+Consulta: NO
+	Sugerida: LONGER 			 (0,240040)
+	Sugerida: OBJECTION 			 (0,151186)
+	Sugerida: ANSWER 			 (0,135225)
+	Sugerida: DOUBT 			 (0,127412)
+	Sugerida: MORE 			 (0,113389)
+	Sugerida: SIGN 			 (0,103510)
+	Sugerida: SECRETS 			 (0,084515)
+	Sugerida: SOONER 			 (0,084515)
+	Sugerida: IDEA 			 (0,059761)
+	Sugerida: BAD 			 (0,042258)
+
+Consulta: ONE
+	Sugerida: HUNDRED 			 (0,119098)
+	Sugerida: POINT 			 (0,109399)
+	Sugerida: WEARS 			 (0,103142)
+	Sugerida: NIGHT 			 (0,075047)
+	Sugerida: PENNY 			 (0,072932)
+	Sugerida: MILE 			 (0,072932)
+	Sugerida: ENJOYMENT 			 (0,072932)
+	Sugerida: DAY 			 (0,070179)
+	Sugerida: CANNOT 			 (0,055575)
+	Sugerida: HALF 			 (0,020228)
+
+Consulta: TO
+	Sugerida: BE 			 (0,200788)
+	Sugerida: SEE 			 (0,106167)
+	Sugerida: SAY 			 (0,104010)
+	Sugerida: MAKE 			 (0,088998)
+	Sugerida: GIVE 			 (0,084237)
+	Sugerida: FIND 			 (0,079584)
+	Sugerida: ACT 			 (0,053056)
+	Sugerida: BEAR 			 (0,044145)
+	Sugerida: ANOTHER 			 (0,036418)
+	Sugerida: ANNOUNCE 			 (0,026528)
+
+Consulta: YOU
+	Sugerida: ARE 			 (0,182507)
+	Sugerida: WILL 			 (0,106430)
+	Sugerida: MEAN 			 (0,103116)
+	Sugerida: MUST 			 (0,096922)
+	Sugerida: MAY 			 (0,079838)
+	Sugerida: HAVE 			 (0,068517)
+	Sugerida: CANNOT 			 (0,066776)
+	Sugerida: DO 			 (0,054698)
+	Sugerida: NOT 			 (0,028480)
+	Sugerida: ALLOW 			 (0,014012)
+
+
+Tempo total de execução do programa: 3399 ms
+Tempo de leitura do corpus: 3246 ms
+Tempo de cálculo das medidas estatísticas: 152 ms
+Tempo de consulta na estrutura de dados de saída: 0 ms

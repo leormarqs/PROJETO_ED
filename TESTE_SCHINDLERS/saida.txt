@@ -1,0 +1,173 @@
+
+Consulta: AN
+	Sugerida: EXPERT 			 (0,194257)
+	Sugerida: ESSENTIAL 			 (0,194257)
+	Sugerida: INVITATION 			 (0,137361)
+	Sugerida: ENORMOUS 			 (0,137361)
+	Sugerida: AMAZING 			 (0,137361)
+	Sugerida: HOUR 			 (0,130312)
+	Sugerida: ELECTRIC 			 (0,130312)
+	Sugerida: EXCELLENT 			 (0,118958)
+	Sugerida: EXTRAORDINARILY 			 (0,097129)
+	Sugerida: EMERGENCY 			 (0,097129)
+
+Consulta: AWAY
+	Sugerida: FROM 			 (0,191741)
+	Sugerida: BRIBING 			 (0,182574)
+	Sugerida: LEAVING 			 (0,060858)
+	Sugerida: FOUR 			 (0,055048)
+	Sugerida: TOWARDS 			 (0,045644)
+	Sugerida: WITHOUT 			 (0,038069)
+	Sugerida: TO 			 (0,022140)
+	Sugerida: INTO 			 (0,020943)
+	Sugerida: IN 			 (0,015162)
+	Sugerida: AND 			 (0,005571)
+
+Consulta: BUILDING
+	Sugerida: SHOUTING 			 (0,107211)
+	Sugerida: ACROSS 			 (0,107211)
+	Sugerida: SITES 			 (0,107211)
+	Sugerida: WROTE 			 (0,070186)
+	Sugerida: STANDING 			 (0,070186)
+	Sugerida: HAS 			 (0,041523)
+	Sugerida: WITHOUT 			 (0,038720)
+	Sugerida: THREE 			 (0,038720)
+	Sugerida: INSIDE 			 (0,035093)
+	Sugerida: HIS 			 (0,027682)
+
+Consulta: DAY
+	Sugerida: SHALL 			 (0,122169)
+	Sugerida: SHOOK 			 (0,086387)
+	Sugerida: TRYING 			 (0,054636)
+	Sugerida: JOURNEY 			 (0,043193)
+	Sugerida: ANSWERED 			 (0,043193)
+	Sugerida: THIRTY 			 (0,040723)
+	Sugerida: HE 			 (0,037288)
+	Sugerida: SEVERAL 			 (0,032651)
+	Sugerida: OSKAR 			 (0,031714)
+	Sugerida: BEFORE 			 (0,017820)
+
+Consulta: ENAMELWARE
+	Sugerida: DIAMONDS 			 (0,087039)
+	Sugerida: FACTORY 			 (0,063214)
+	Sugerida: OVER 			 (0,059131)
+	Sugerida: SCHINDLER 			 (0,021647)
+	Sugerida: ON 			 (0,020468)
+	Sugerida: BUT 			 (0,019585)
+	Sugerida: AT 			 (0,018808)
+	Sugerida: FOR 			 (0,017070)
+	Sugerida: AND 			 (0,009200)
+	Sugerida: TO 			 (0,009141)
+
+Consulta: FACTORY
+	Sugerida: OWNERS 			 (0,165748)
+	Sugerida: FLOOR 			 (0,121046)
+	Sugerida: UNEXPECTEDLY 			 (0,104828)
+	Sugerida: MANAGERS 			 (0,104828)
+	Sugerida: OWNER 			 (0,079243)
+	Sugerida: SPY 			 (0,074125)
+	Sugerida: SURELY 			 (0,060523)
+	Sugerida: SITE 			 (0,046881)
+	Sugerida: IN 			 (0,026117)
+	Sugerida: BEGAN 			 (0,014399)
+
+Consulta: GOOD
+	Sugerida: RIDE 			 (0,145865)
+	Sugerida: LUNCH 			 (0,145865)
+	Sugerida: CATHOLIC 			 (0,130466)
+	Sugerida: TOBACCO 			 (0,103142)
+	Sugerida: ROADS 			 (0,103142)
+	Sugerida: ONES 			 (0,103142)
+	Sugerida: METALWORKER 			 (0,103142)
+	Sugerida: EDUCATION 			 (0,103142)
+	Sugerida: FOOD 			 (0,091245)
+	Sugerida: BLUE 			 (0,051571)
+
+Consulta: HISTORY
+	Sugerida: WHICH 			 (0,054554)
+	Sugerida: AND 			 (0,037372)
+	Sugerida: FOR 			 (0,023113)
+	Sugerida: WAS 			 (0,018443)
+
+Consulta: HOW
+	Sugerida: STRANGELY 			 (0,113228)
+	Sugerida: DEPRESSED 			 (0,080064)
+	Sugerida: COULD 			 (0,078135)
+	Sugerida: EMPTY 			 (0,065372)
+	Sugerida: CAREFUL 			 (0,060523)
+	Sugerida: SHE 			 (0,053709)
+	Sugerida: MANY 			 (0,049417)
+	Sugerida: WORRIED 			 (0,042796)
+	Sugerida: MUCH 			 (0,041345)
+	Sugerida: CAN 			 (0,027067)
+
+Consulta: ISRAEL
+	Sugerida: OFTEN 			 (0,258199)
+	Sugerida: INVITED 			 (0,235702)
+	Sugerida: BEING 			 (0,105409)
+
+Consulta: OSKAR
+	Sugerida: S 			 (0,162560)
+	Sugerida: SCHINDLER 			 (0,149098)
+	Sugerida: WAS 			 (0,098506)
+	Sugerida: FOLLOWED 			 (0,059949)
+	Sugerida: HAD 			 (0,055783)
+	Sugerida: OBSERVED 			 (0,051917)
+	Sugerida: EXCUSED 			 (0,051917)
+	Sugerida: DECIDED 			 (0,046961)
+	Sugerida: BEGAN 			 (0,035657)
+	Sugerida: AND 			 (0,025347)
+
+Consulta: PFEFFERBERG
+	Sugerida: CRIED 			 (0,147442)
+	Sugerida: URGED 			 (0,104257)
+	Sugerida: RELAXED 			 (0,104257)
+	Sugerida: NERVOUSLY 			 (0,104257)
+	Sugerida: EXPECTING 			 (0,104257)
+	Sugerida: ARGUED 			 (0,104257)
+	Sugerida: AMUSING 			 (0,104257)
+	Sugerida: RECOGNIZED 			 (0,085126)
+	Sugerida: ANNOUNCED 			 (0,073721)
+	Sugerida: BEGAN 			 (0,040505)
+
+Consulta: SCHINDLER
+	Sugerida: S 			 (0,125889)
+	Sugerida: APPEARED 			 (0,082903)
+	Sugerida: WANDERED 			 (0,071796)
+	Sugerida: PRACTISED 			 (0,071796)
+	Sugerida: NOTED 			 (0,071796)
+	Sugerida: LAUGHED 			 (0,058621)
+	Sugerida: THANKED 			 (0,050767)
+	Sugerida: CONFESSED 			 (0,050767)
+	Sugerida: OWNED 			 (0,032108)
+	Sugerida: COULD 			 (0,021020)
+
+Consulta: TO
+	Sugerida: GET 			 (0,147290)
+	Sugerida: BE 			 (0,138948)
+	Sugerida: MAKE 			 (0,116510)
+	Sugerida: KEEP 			 (0,111392)
+	Sugerida: SAVE 			 (0,080845)
+	Sugerida: HELP 			 (0,079388)
+	Sugerida: ADD 			 (0,060634)
+	Sugerida: ACT 			 (0,045835)
+	Sugerida: ACCEPT 			 (0,035007)
+	Sugerida: ADMIT 			 (0,030317)
+
+Consulta: WHO
+	Sugerida: HAD 			 (0,141302)
+	Sugerida: TELEPHONED 			 (0,092057)
+	Sugerida: SAVES 			 (0,092057)
+	Sugerida: LONGED 			 (0,092057)
+	Sugerida: BREAK 			 (0,092057)
+	Sugerida: WERE 			 (0,077737)
+	Sugerida: RELIED 			 (0,065094)
+	Sugerida: GIVES 			 (0,065094)
+	Sugerida: ESCAPED 			 (0,053149)
+	Sugerida: COULD 			 (0,026952)
+
+
+Tempo total de execução do programa: 2351 ms
+Tempo de leitura do corpus: 2201 ms
+Tempo de cálculo das medidas estatísticas: 149 ms
+Tempo de consulta na estrutura de dados de saída: 0 ms

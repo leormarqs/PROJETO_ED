@@ -1,0 +1,138 @@
+
+Consulta: BUT
+	Sugerida: SOLLOZZ 			 (0,102062)
+	Sugerida: SIGNOR 			 (0,102062)
+	Sugerida: MICHAEL 			 (0,090487)
+	Sugerida: DECIDED 			 (0,083333)
+	Sugerida: HE 			 (0,074927)
+	Sugerida: STRANGELY 			 (0,072169)
+	Sugerida: NEWS 			 (0,072169)
+	Sugerida: CONTROLLED 			 (0,072169)
+	Sugerida: I 			 (0,042875)
+	Sugerida: CALLED 			 (0,030773)
+
+Consulta: CLEMENZA
+	Sugerida: CRIED 			 (0,154303)
+	Sugerida: KISSED 			 (0,109109)
+	Sugerida: REACHED 			 (0,089087)
+	Sugerida: HID 			 (0,089087)
+	Sugerida: LIFTED 			 (0,069007)
+	Sugerida: THREW 			 (0,058321)
+	Sugerida: LAUGHED 			 (0,054554)
+	Sugerida: COMING 			 (0,054554)
+	Sugerida: QUICKLY 			 (0,038576)
+	Sugerida: HAD 			 (0,031334)
+
+Consulta: FAMILY
+	Sugerida: BUSINESS 			 (0,200574)
+	Sugerida: LIVED 			 (0,109109)
+	Sugerida: DURING 			 (0,089087)
+	Sugerida: RESTAURANT 			 (0,062994)
+	Sugerida: TRUST 			 (0,058321)
+	Sugerida: FREDO 			 (0,054554)
+	Sugerida: KNEW 			 (0,051434)
+	Sugerida: HOME 			 (0,044544)
+	Sugerida: NOW 			 (0,031497)
+	Sugerida: ABOUT 			 (0,026861)
+
+Consulta: HOUSE
+	Sugerida: SURROUNDED 			 (0,188982)
+	Sugerida: ANY 			 (0,133631)
+	Sugerida: FULL 			 (0,084515)
+	Sugerida: OUTSIDE 			 (0,072739)
+	Sugerida: CARRYING 			 (0,071429)
+	Sugerida: FOLLOWED 			 (0,066815)
+	Sugerida: UNTIL 			 (0,059761)
+	Sugerida: TALKING 			 (0,050508)
+	Sugerida: SONNY 			 (0,041996)
+	Sugerida: IS 			 (0,028820)
+
+Consulta: MY
+	Sugerida: FATHER 			 (0,387551)
+	Sugerida: REASONS 			 (0,130189)
+	Sugerida: NUMBER 			 (0,130189)
+	Sugerida: INTELLIGENCE 			 (0,130189)
+	Sugerida: ARRANGEMENTS 			 (0,130189)
+	Sugerida: BUSINESS 			 (0,120877)
+	Sugerida: SISTER 			 (0,106299)
+	Sugerida: NAME 			 (0,106299)
+	Sugerida: YOUNGEST 			 (0,075165)
+	Sugerida: OWN 			 (0,065094)
+
+Consulta: ONE
+	Sugerida: SPECIAL 			 (0,162221)
+	Sugerida: THROWING 			 (0,162221)
+	Sugerida: KNEE 			 (0,162221)
+	Sugerida: AUTUMN 			 (0,162221)
+	Sugerida: DAY 			 (0,132453)
+	Sugerida: MILLION 			 (0,114708)
+	Sugerida: HOUR 			 (0,114708)
+	Sugerida: FINGER 			 (0,114708)
+	Sugerida: MORNING 			 (0,102598)
+	Sugerida: FAVOUR 			 (0,066227)
+
+Consulta: SITTING
+	Sugerida: OPPOSITE 			 (0,235702)
+	Sugerida: ALONE 			 (0,136083)
+	Sugerida: CLOSE 			 (0,105409)
+	Sugerida: UNDER 			 (0,096225)
+	Sugerida: IN 			 (0,061372)
+	Sugerida: WITH 			 (0,060193)
+	Sugerida: NEXT 			 (0,054074)
+	Sugerida: QUIETLY 			 (0,051434)
+	Sugerida: OUTSIDE 			 (0,045361)
+	Sugerida: AT 			 (0,041345)
+
+Consulta: THE
+	Sugerida: DOOR 			 (0,153168)
+	Sugerida: CAR 			 (0,145987)
+	Sugerida: STREET 			 (0,127000)
+	Sugerida: TABLE 			 (0,111446)
+	Sugerida: HOUSE 			 (0,101311)
+	Sugerida: CORNER 			 (0,094768)
+	Sugerida: BABY 			 (0,074342)
+	Sugerida: FIVE 			 (0,066324)
+	Sugerida: LAST 			 (0,051056)
+	Sugerida: MOUNTAINS 			 (0,038292)
+
+Consulta: TOM
+	Sugerida: HAGEN 			 (0,470649)
+	Sugerida: COUGHED 			 (0,102598)
+	Sugerida: LOOKED 			 (0,073057)
+	Sugerida: POURED 			 (0,072548)
+	Sugerida: NODDED 			 (0,072548)
+	Sugerida: SAID 			 (0,066794)
+	Sugerida: WAITED 			 (0,056911)
+	Sugerida: SADLY 			 (0,045883)
+	Sugerida: BY 			 (0,034684)
+	Sugerida: LIKE 			 (0,021874)
+
+Consulta: WITH
+	Sugerida: US 			 (0,139010)
+	Sugerida: TEARS 			 (0,127688)
+	Sugerida: A 			 (0,085656)
+	Sugerida: THICK 			 (0,085126)
+	Sugerida: SILVER 			 (0,085126)
+	Sugerida: MACHINE 			 (0,085126)
+	Sugerida: KISSES 			 (0,085126)
+	Sugerida: GREAT 			 (0,085126)
+	Sugerida: HIS 			 (0,077233)
+	Sugerida: DARK 			 (0,042563)
+
+Consulta: YOU
+	Sugerida: RE 			 (0,235702)
+	Sugerida: THINK 			 (0,100504)
+	Sugerida: DOING 			 (0,094281)
+	Sugerida: WANT 			 (0,091499)
+	Sugerida: CAN 			 (0,090150)
+	Sugerida: SHOULDN 			 (0,066667)
+	Sugerida: PLAYED 			 (0,066667)
+	Sugerida: ASK 			 (0,050395)
+	Sugerida: ANIMAL 			 (0,033333)
+	Sugerida: CAME 			 (0,018490)
+
+
+Tempo total de execução do programa: 481 ms
+Tempo de leitura do corpus: 433 ms
+Tempo de cálculo das medidas estatísticas: 48 ms
+Tempo de consulta na estrutura de dados de saída: 0 ms
