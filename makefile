@@ -1,12 +1,11 @@
-sugestao: sugestao.o fileread.o consultadas.o proximas.o
-	gcc -o sugestao sugestao.o fileread.o consultadas.o proximas.o -lm
-	rm *.o
-sugestao.o: sugestao.c consultadas.h
-	gcc -c -g sugestao.c 
-fileread.o: fileread.c fileread.h
-	gcc -c -g fileread.c 
-consultadas.o: consultadas.c consultadas.h proximas.h
-	gcc -c -g consultadas.c
-proximas.o: proximas.c proximas.h fileread.h
-	gcc -c -g proximas.c
+sugestao: src/sugestao.o src/fileread.o src/consultadas.o src/proximas.o
+	gcc -o sugestao src/sugestao.o src/fileread.o src/consultadas.o src/proximas.o -lm
+sugestao.o: src/sugestao.c src/consultadas.h
+	gcc -c -g src/sugestao.c 
+fileread.o: src/fileread.c src/fileread.h
+	gcc -c -g src/fileread.c 
+consultadas.o: src/consultadas.c src/consultadas.h src/proximas.h
+	gcc -c -g src/consultadas.c
+proximas.o: src/proximas.c src/proximas.h src/fileread.h
+	gcc -c -g src/proximas.c
 
